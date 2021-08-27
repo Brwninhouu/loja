@@ -1,0 +1,16 @@
+{
+  "celulares": [
+    {
+      "id": 1,
+      "nome": "celular 1",
+      "preco": "R$1.560,00",
+      "imagem": ""
+    },
+    {
+      "id": 2,
+      "nome": "celular 2",
+      "preco": "R$800,00",
+      "imagem": ""
+    }
+  ]
+}
