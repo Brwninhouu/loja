@@ -1,17 +1,28 @@
-
 {
     "celulares": [
     {
     "id": 1,
-    "nome": "celular 1",
-    "preco": "R$1.560,00",
-    "imagem": ""
+    "nome": "IPHONE 12",
+    "preco": "R$9.008.563,00",
+    "imagem": "assets/img/Celular2.jfif"
     },
     {
     "id": 2,
-    "nome": "celular 2",
-    "preco": "R$800,00",
-    "imagem": ""
+    "nome": "POCOPHONE F1",
+    "preco": "R$1.500",
+    "imagem": "assets/img/Celular1.jpg"
     }
+
+
+
+
+
+
+
+
+
+
+
+
     ]
     }
