@@ -15,6 +15,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { AcessorioComponent } from './acessorio/acessorio.component';
 import { AcessoriosComponent } from './acessorio/acessorios/acessorios.component';
 import { AcessorioService } from './acessorio/acessorio.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalclienteComponent } from './modalcliente/modalcliente.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 @NgModule({
   declarations: [
@@ -25,7 +34,9 @@ import { AcessorioService } from './acessorio/acessorio.service';
     ClienteComponent,
     CelularesComponent,
     AcessorioComponent,
-    AcessoriosComponent
+    AcessoriosComponent,
+    ModalclienteComponent
+    
   ],
 
 
@@ -36,11 +47,25 @@ import { AcessorioService } from './acessorio/acessorio.service';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    AngularFireModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyAyBqd8rs-L7z_H5U2ZkhIdc-xBHDLvR2Y",
+  authDomain: "brunoscript.firebaseapp.com",
+  projectId: "brunoscript",
+  storageBucket: "brunoscript.appspot.com",
+  messagingSenderId: "397245791285",
+  appId: "1:397245791285:web:cf6f57b33390efc6b4c57c",
+  measurementId: "G-JWPCYMDBNY"
+    })
   ],
 
-
-
+  entryComponents:[ModalclienteComponent],
 
   providers: [CelserviceService, AcessorioService],
 
