@@ -12,7 +12,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-
+import { AcessorioComponent } from './acessorio/acessorio.component';
+import { AcessoriosComponent } from './acessorio/acessorios/acessorios.component';
+import { AcessorioService } from './acessorio/acessorio.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MatButtonModule } from '@angular/material/button';
     MenuComponent,
     CelularComponent,
     ClienteComponent,
-    CelularesComponent
+    CelularesComponent,
+    AcessorioComponent,
+    AcessoriosComponent
   ],
 
 
@@ -38,7 +42,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 
-  providers: [CelserviceService],
+  providers: [CelserviceService, AcessorioService],
 
   bootstrap: [AppComponent]
 })

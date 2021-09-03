@@ -11,18 +11,29 @@
     "nome": "POCOPHONE F1",
     "preco": "R$1.500",
     "imagem": "assets/img/Celular1.jpg"
-    }
+    }],
 
-
-
-
-
-
-
-
-
-
-
-
+    "acessorios": [
+        {
+        "id": 1,
+        "nome": "Fone",
+        "preco": "R$15,00",
+        "imagem": "assets/img/fone.jpg"
+        },
+        {
+        "id": 2,
+        "nome": "carregador",
+        "preco": "R$50,00",
+        "imagem": "assets/img/carregador.jpg"
+        }
+    
     ]
+
+
+
+
+
+
+
+
     }
