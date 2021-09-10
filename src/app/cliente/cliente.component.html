@@ -1,4 +1,6 @@
-<button mat-raised-button (click)="inserir()">BUTÃO</button>
+
+<div class="container-fluid">
+<button mat-raised-button (click)="inserir()">CADASTRAR</button>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -11,15 +13,31 @@
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
   
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
+    <!-- Telefone Column -->
+    <ng-container matColumnDef="value">
       <th mat-header-cell *matHeaderCellDef> Telefone </th>
       <td mat-cell *matCellDef="let element"> {{element.value}} </td>
     </ng-container>
   
-   
+    <ng-container matColumnDef="functions">
+    <th mat-header-cell *matHeaderCellDef> Ação </th>
+  
+    <td mat-cell *matCellDef="let element">
+    <button mat-raised-button color="primary" (click)="editar(element)">EDITAR</button>
+    <button mat-raised-button color="warn" (click)="delete(element.key)">DELETAR</button>
+  
+  </td>
+</ng-container>
+
+
+
+
+
+
+
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  
-  
+
+</div>

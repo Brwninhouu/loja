@@ -57,6 +57,7 @@ import { getAnalytics } from "firebase/analytics";
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyAyBqd8rs-L7z_H5U2ZkhIdc-xBHDLvR2Y",
   authDomain: "brunoscript.firebaseapp.com",
+  databaseURL: "https://brunoscript-default-rtdb.firebaseio.com",
   projectId: "brunoscript",
   storageBucket: "brunoscript.appspot.com",
   messagingSenderId: "397245791285",

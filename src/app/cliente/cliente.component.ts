@@ -11,23 +11,27 @@ import { map } from 'rxjs/operators';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private db : AngularFireDatabase) {
-
-this.dataSource = this.db.list('clientes')
-.snapshotChanges()
-.pipe(
-  map(items =>{
-    return items.map(item => {
-      return Object.assign({key: item.payload.key},
-        item.payload.val()
-        )
-    })
-  }
-))
-  }
+ 
 
   displayedColumns: string[] = ['name', 'value', 'functions'];
   dataSource : any;
+
+
+  constructor(public dialog: MatDialog, private db : AngularFireDatabase) {
+
+    this.dataSource = this.db.list('clientes')
+    .snapshotChanges()
+    .pipe(
+      map(items =>{
+        return items.map(item => {
+          return Object.assign({key: item.payload.key},
+            item.payload.val()
+            )
+        })
+      }
+    ))
+      }
+
 
   inserir(){
 
@@ -50,7 +54,7 @@ this.dataSource = this.db.list('clientes')
 
     const dialogRef = this.dialog.open(ModalclienteComponent, {
       width: '350px',
-      data: {}
+      data
     });
     dialogRef.afterClosed().subscribe(result => {
     if(result){
