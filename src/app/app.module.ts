@@ -17,6 +17,8 @@ import { AcessoriosComponent } from './acessorio/acessorios/acessorios.component
 import { AcessorioService } from './acessorio/acessorio.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalclienteComponent } from './modalcliente/modalcliente.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { ModalprodutoComponent } from './modalproduto/modalproduto.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -24,6 +26,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { getAnalytics } from "firebase/analytics";
     CelularesComponent,
     AcessorioComponent,
     AcessoriosComponent,
-    ModalclienteComponent
+    ModalclienteComponent,
+    ProdutoComponent,
+    ModalprodutoComponent
     
   ],
 
@@ -66,7 +71,7 @@ import { getAnalytics } from "firebase/analytics";
     })
   ],
 
-  entryComponents:[ModalclienteComponent],
+  entryComponents:[ModalclienteComponent, ModalprodutoComponent],
 
   providers: [CelserviceService, AcessorioService],
 
